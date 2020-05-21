@@ -71,7 +71,7 @@ int CSTRING::lineParsingForString()
 		}
 
 		//strcpy_s(szFieldValueList[nIdx - 1], sizeof(szFieldValueList[nIdx - 1]), (pszTokenData + nLen));
-		sprintf_s(szFieldValueList[nIdx - 1], "%s", pszTokenData + nLen - 1);
+		sprintf_s(szFieldValueList[nIdx - 1], "%s", pszTokenData + nLen);
 
 		//cout << nIdx << ". " << pszTokenData << endl;
 		cout << szFieldList[nIdx - 1] << " | " << szFieldValueList[nIdx - 1] << endl;
