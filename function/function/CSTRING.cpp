@@ -32,7 +32,7 @@ int CSTRING::lineParsingForString()
 		"authority_key_id",
 		"sign_key_usage"
 	};
-	char szFieldValueList[20][1000] = { 0, };
+	char szFieldValueList[20][100] = { 0, };
 
 	pszTokenData = strtok_s(szData, szToken, &pszContext);
 	while (pszTokenData != NULL) {
