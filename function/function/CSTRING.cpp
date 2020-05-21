@@ -7,28 +7,8 @@ int CSTRING::lineParsingForString()
 	int nIdx = 1;
 	char* pszTokenData = NULL;
 	char* pszContext = NULL;
-	char szToken[10] = "\r\t";
-	char szData[3500] = "validity_mode = month\
-		validity_period = 9999\
-		algorithm_type = ECDSA\
-		signature_algorithm = sha256WithECDSAEncryption\
-		key_size = 256\
-		csp = software\
-		pop = ca\
-		km_key_gen = \
-		km_key_backup = \
-		saved_key_use = f\
-		delta_cdp = f\
-		template = \
-		auto_issue = t\
-		short_lived_validity = \
-		short_lived_overlap = \
-		pol_kup_day = \
-		short_lived_policy = \
-		ou_setting = \
-		authority_key_id = n|ki=t|aci=t|directoryName^cn=ROOTCA01,o=kepco,c=kr!|cs=t|\
-		sign_key_usage = c|digitalSignature,nonRepudiation|\
-		";
+	char szToken[10] = "\n";
+	char szData[3500] = "validity_mode = month\nvalidity_period = 9999\nalgorithm_type = ECDSA\nsignature_algorithm = sha256WithECDSAEncryption\nkey_size = 256\ncsp = software\npop = ca\nkm_key_gen = \nkm_key_backup = \nsaved_key_use = f\ndelta_cdp = f\ntemplate = \nauto_issue = t\nshort_lived_validity = \nshort_lived_overlap = \npol_kup_day = \nshort_lived_policy = \nou_setting = \nauthority_key_id = n|ki=t|aci=t|directoryName^cn=ROOTCA01,o=kepco,c=kr!|cs=t|\nsign_key_usage = c|digitalSignature,nonRepudiation|\n";
 	
 	char szFieldList[20][100] = {
 		"validity_mode",
@@ -67,6 +47,8 @@ int CSTRING::lineParsingForString()
 		nLen = strlen(szFieldList[nIdx - 1]) + 3;
 		if (strlen(pszTokenData) == nLen) {
 			//cout << strlen(pszTokenData) << nLen << endl;
+			pszTokenData = strtok_s(pszContext, szToken, &pszContext);
+			nIdx++;
 			continue;
 		}
 
