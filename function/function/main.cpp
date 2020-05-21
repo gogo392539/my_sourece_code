@@ -2,24 +2,13 @@
 #include "fileFunc.h"
 #include "C_TOKEN.h"
 #include "C_TIME.h"
+#include "CSTRING.h"
 
 int main(void)
 {
-	//C_TIME cTime;
-	//char szTime[100] = { 0, };
-	//char* pTime = NULL;
+	CSTRING CString;
 
-	////cTime.getCurrentTime(szTime, sizeof(szTime));
-	//cTime.getCurrentTime2(szTime, sizeof(szTime));
-
-
-	//cout << szTime << endl;
-
-	
-
-	BYTE szTemp[32] = { 0x0f6, 0x0af, 0x05f, 0x08c, 0x0e0, 0x03d, 0x0f2, 0x04a, 0x02b, 0x0cf, 0x0c4, 0x0b2, 0x090, 0x09c, 0x09e, 0x014, 0x0d5, 0x048, 0x04a, 0x0ef, 0x0fc, 0x064, 0x08c, 0x004, 0x06b, 0x064, 0x03a, 0x0ee, 0x047, 0x0bb, 0x0de, 0x016 };
-	cout << "seo91" << endl;
-
+	CString.lineParsingForString();
 
 
 	return 0;

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "C_TOKEN.h"
 
-int C_TOKEN::m_strToken(char* pszDst, char* pszSrc, int nPosition, const char cDelimiter)
+int C_TOKEN::strToken(char* pszDst, char* pszSrc, int nPosition, const char cDelimiter)
 {
 	int i;
 	char* front = nullptr;
@@ -46,7 +46,7 @@ int C_TOKEN::m_strToken(char* pszDst, char* pszSrc, int nPosition, const char cD
 	return 0;
 }
 
-int C_TOKEN::m_intToken(int* pDst, char* pszSrc, int nPosition, const char cDelimiter)
+int C_TOKEN::intToken(int* pDst, char* pszSrc, int nPosition, const char cDelimiter)
 {
 	int i;
 	char intBuf[100];
@@ -94,7 +94,7 @@ int C_TOKEN::m_intToken(int* pDst, char* pszSrc, int nPosition, const char cDeli
 	return 0;
 }
 
-int C_TOKEN::m_charToken(char* pDst, char* pszSrc, int nPosition, const char cDelimiter)
+int C_TOKEN::charToken(char* pDst, char* pszSrc, int nPosition, const char cDelimiter)
 {
 	int i;
 	char* point = nullptr;

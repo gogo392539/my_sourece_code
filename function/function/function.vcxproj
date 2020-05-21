@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CSTRING.cpp" />
     <ClCompile Include="C_TIME.cpp" />
     <ClCompile Include="C_TOKEN.cpp" />
     <ClCompile Include="fileFunc.cpp" />
@@ -133,6 +134,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CSTRING.h" />
     <ClInclude Include="C_TIME.h" />
     <ClInclude Include="C_TOKEN.h" />
     <ClInclude Include="fileFunc.h" />
