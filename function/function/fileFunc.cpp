@@ -101,6 +101,7 @@ int fileFunc::makeDir2(const char* pszDirPath)
 
 int fileFunc::viewFileList(const char* pszFileName)
 {
+	//해당 경로에 있는 파일들의 이름 리스트를 출력
 	int nResult = 0;
 	intptr_t hHandle = 0L;
 	_finddata_t	findData;
@@ -133,6 +134,7 @@ int fileFunc::viewFileList(const char* pszFileName)
 
 int fileFunc::viewFileList2(const char* pszFileName)
 {
+	//해당 경로에 있는 파일들의 이름 리스트를 출력
 	bool bResult = false;
 	HANDLE Hhandle = 0L;
 	WIN32_FIND_DATA	findData;
@@ -162,4 +164,17 @@ int fileFunc::viewFileList2(const char* pszFileName)
 	FindClose(Hhandle);
 
 	return 0;
+}
+
+int fileFunc::fn_StrDecimalToNumber(const char* pszNumbers, int nConvertBase)
+{
+	//정수 문자열을 nConvertBase 진수에 맞는 값으로 변환하여 반환하는 함수
+	int nResult = 0;
+	char* pszEndPtr = NULL;
+
+	nResult = strtol(pszNumbers, &pszEndPtr, nConvertBase);
+
+	cout << nResult << endl;
+
+	return nResult;
 }

@@ -6,9 +6,10 @@
 
 int main(void)
 {
-	CSTRING CString;
+	char szNumber[100] = "1234";
+	fileFunc cFileFunc;
 
-	CString.lineParsingForString();
+	cFileFunc.fn_StringToNumber(szNumber, 16);
 
 
 	return 0;
